@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/js/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/js/owl-carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Lemkus | Main</title>
+</head>
+<body>
+    <header class="header flex items-center h-24 relative">
+        <div class="box-container">
+            <div class="header__wrapper flex justify-between items-center">
+                <a href="/">
+                    <img src="assets/img/logo-b.svg" alt="">
+                </a>
+                <nav class="header__nav flex gap-8">
+                    <a href="#">Новинки</a>
+                    <a href="#">Кросовки</a>
+                    <a href="#">Одежда</a>
+                    <a href="#">Акссесуары</a>
+                    <a href="#">Детям</a>
+                    <a href="#">Культура</a>
+                    <a href="#">Бренды</a>
+                </nav>
+                <div class="header__icons flex gap-6">
+                    <a href="#"><img src="assets/img/icons/search.svg" alt="" class="search cursor-pointer"></a>
+                    <a href="#"><img src="assets/img/icons/favorite.svg" alt=""></a>
+                    <a href="#"><img src="assets/img/icons/user.svg" alt=""></a>
+                    <div class="header__shipping-cart relative cursor-pointer">
+                        <div class="header__shipping-cart-counter w-4 h-4 rounded-full bg-black flex items-center justify-center absolute">
+                            <span class="text-white text-xs">0</span>
+                        </div>
+                        <img src="assets/img/icons/cart.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="header-mobile-cart hidden">
+                    <div class="header__shipping-cart relative cursor-pointer">
+                        <div class="header__shipping-cart-counter w-4 h-4 rounded-full bg-black flex items-center justify-center absolute">
+                            <span class="text-white text-xs">0</span>
+                        </div>
+                        <img src="assets/img/icons/cart.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="header-menu hidden">
+                    <img src="assets/img/icons/menu.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-wrapper fixed left-0 top-0 w-full h-full hidden z-50">
+            <div class="header__cart absolute right-0 top-0 h-full border border-black p-6 flex flex-col hidden">
+                <div class="header__cart-title flex justify-between items-start">
+                    <h2 class="text-4xl">ВАША КОРЗИНА</h2>
+                    <p class="text-sm close-cart cursor-pointer">ЗАКРЫТЬ</p>
+                </div>
+
+                <div class="header__cart-products-wrapper">
+                    <div class="header__cart-product flex justify-between items-start">
+                        <div class="header__cart-product-info flex items-start">
+                            <div class="header__cart-product-img w-28 h-28 border border-black">
+                                <img src="assets/img/cart/1.png" class="object-contain w-full h-full" alt="">
+                            </div>
+                            <div class="header__cart-product-data ml-5 w-64">
+                                <h3 class="text-xl font-semibold">GEL-NUMBUS</h3>
+                                <p class="text-base">Размер: 6</p>
+                                <p class="text-xs">2,256.00 руб</p>
+                            </div>
+                        </div>
+                        
+                        <div class="remove-counter-block h-28 relative">
+                            <img src="assets/img/icons/remove.svg" alt="" class="w-6 h-6 cursor-pointer">
+                            <div class="cart-counter-block rounded-full w-20 h-8 bg-black flex justify-center items-center absolute">
+                                <p class="text-white font-semibold">1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/header__cart-product-->
+
+                    <div class="header__cart-product flex justify-between items-start">
+                        <div class="header__cart-product-info flex items-start">
+                            <div class="header__cart-product-img w-28 h-28 border border-black">
+                                <img src="assets/img/cart/2.png" class="object-contain w-full h-full" alt="">
+                            </div>
+                            <div class="header__cart-product-data ml-5 w-64">
+                                <h3 class="text-xl font-semibold">CONS AS-1 PRO LEATHER CLASSIC OX</h3>
+                                <p class="text-base">Размер: 6</p>
+                                <p class="text-xs">2,256.00 руб</p>
+                            </div>
+                        </div>
+                        
+                        <div class="remove-counter-block h-28 relative">
+                            <img src="assets/img/icons/remove.svg" alt="" class="w-6 h-6 cursor-pointer">
+                            <div class="cart-counter-block rounded-full w-20 h-8 bg-black flex justify-center items-center absolute">
+                                <p class="text-white font-semibold">1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/header__cart-product-->
+                    
+                </div>
+                <!--/header__cart-products-wrapper-->
+
+                <div class="header__cart-total flex flex-col flex-1 justify-end mt-20">
+                    <div class="header__cart-total-text py-3 flex justify-between items-center">
+                        <p>Итого</p>
+                        <span>5,200.00 руб.</span>
+                    </div>
+
+                    <div class="header__cart-total-btns flex justify-between mt-4">
+                        <button class="base-btn w-48 h-10 border border-black rounded-full"><p>Продолжить</p></button>
+                        <button class="base-btn yellow-btn w-48 h-10 border border-black rounded-full"><p>Оформить</p></button>
+                    </div>
+                </div>
+                <!--/header__cart-total-->
+                
+            </div>
+            <!--/header__cart-->
+        </div>
+
+        <div class="header-mobile-menu py-4 px-7 hidden z-50">
+            <ul class="header-mobile-menu_big flex flex-col text-4xl uppercase gap-y-2">
+                <li><a href="#">Новинки</a></li>
+                <li><a href="#">Кросовки</a></li>
+                <li><a href="#">Одежда</a></li>
+                <li><a href="#">Акссесуары</a></li>
+                <li><a href="#">Детям</a></li>
+                <li><a href="#">Культура</a></li>
+                <li><a href="#">Бренды</a></li>
+            </ul>
+
+            <ul class="flex justify-between items-center mt-10">
+                <li><a href="#">Аккаунт</a></li>
+                <li><a href="#">Избранное</a></li>
+                <li><a href="#">Поиск</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="box-container">
+            <div class="banner-block owl-carousel cursor-pointer mt-10">
+                <div class="banner-item w-full">
+                    <img src="assets/img/banner.jpg" alt="" class="w-full h-full object-cover">
+                </div>
+
+                <div class="banner-item w-full">
+                    <img src="assets/img/banner.jpg" alt="" class="w-full h-full object-cover">
+                </div>
+
+                <div class="banner-item w-full">
+                    <img src="assets/img/banner.jpg" alt="" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <section class="products-line mt-10">
+                <h2 class="uppercase text-9xl">Новинки</h2>
+                <div class="products-line__wrapper mt-10 owl-carousel">
+                    <a href="#">
+                        <div class="product-cart border border-black p-7">
+                            <div class="product-cart__img border border-black overflow-hidden w-full h-72">
+                                <img src="assets/img/product-cart.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <p class="product-cart-title font-semibold text-lg mt-2">CONS AS-I PRO LEATHER CLASSIC OX</p>
+                            <p class="product-cart-price font-semibold text-lg">2,299.00 РУБ</p>
+                        </div>
+                        <!-- /.product-cart -->
+                    </a>
+
+                    <a href="#">
+                        <div class="product-cart border border-black p-7">
+                            <div class="product-cart__img border border-black overflow-hidden w-full h-72">
+                                <img src="assets/img/product-cart.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <p class="product-cart-title font-semibold text-lg mt-2">CONS AS-I PRO LEATHER CLASSIC OX</p>
+                            <p class="product-cart-price font-semibold text-lg">2,299.00 РУБ</p>
+                        </div>
+                        <!-- /.product-cart -->
+                    </a>
+
+                    <a href="#">
+                        <div class="product-cart border border-black p-7">
+                            <div class="product-cart__img border border-black overflow-hidden w-full h-72">
+                                <img src="assets/img/product-cart.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <p class="product-cart-title font-semibold text-lg mt-2">CONS AS-I PRO LEATHER CLASSIC OX</p>
+                            <p class="product-cart-price font-semibold text-lg">2,299.00 РУБ</p>
+                        </div>
+                        <!-- /.product-cart -->
+                    </a>
+
+                    <a href="#">
+                        <div class="product-cart border border-black p-7">
+                            <div class="products-text-block w-full h-full flex justify-center items-center">
+                                <p class="uppercase text-4xl font-semibold underline text-center">Посмотреть все</p>
+                            </div>
+                        </div>
+                        <!-- /.product-cart -->
+                    </a>
+                </div>
+                <!--/products-line__wrapper-->
+
+                <div class="hint-item border border-black rounded-full absolute hidden">
+                    <p class="font-semibold text-xl text-center px-8 py-3">Тяни</p>
+                </div>
+            </section>
+
+            <section class="products-line mt-10">
+                <h2 class="uppercase text-9xl">RAY-BAN</h2>
+                <div class="products-line__wrapper mt-10 owl-carousel">
+                    <a href="#">
+                        <div class="product-cart border border-black p-7">
+                            <div class="product-cart__img border border-black overflow-hidden w-full h-72">
+                                <img src="assets/img/rayban1.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <p class="product-cart-title font-semibold text-lg mt-2">CONS AS-I PRO LEATHER CLASSIC OX</p>
+                            <p class="product-cart-price font-semibold text-lg">2,299.00 РУБ</p>
+                        </div>
+                        <!-- /.product-cart -->
+                    </a>
+
+                    <a href="#">
+                        <div class="product-cart border border-black p-7">
+                            <div class="product-cart__img border border-black overflow-hidden w-full h-72">
+                                <img src="assets/img/rayban2.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <p class="product-cart-title font-semibold text-lg mt-2">CONS AS-I PRO LEATHER CLASSIC OX</p>
+                            <p class="product-cart-price font-semibold text-lg">2,299.00 РУБ</p>
+                        </div>
+                        <!-- /.product-cart -->
+                    </a>
+
+                    <a href="#">
+                        <div class="product-cart border border-black p-7">
+                            <div class="product-cart__img border border-black overflow-hidden w-full h-72">
+                                <img src="assets/img/product-cart.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <p class="product-cart-title font-semibold text-lg mt-2">CONS AS-I PRO LEATHER CLASSIC OX</p>
+                            <p class="product-cart-price font-semibold text-lg">2,299.00 РУБ</p>
+                        </div>
+                        <!-- /.product-cart -->
+                    </a>
+
+                    <a href="#">
+                        <div class="product-cart border border-black p-7">
+                            <div class="products-text-block w-full h-full flex justify-center items-center">
+                                <p class="uppercase text-4xl font-semibold underline text-center">Посмотреть все</p>
+                            </div>
+                        </div>
+                        <!-- /.product-cart -->
+                    </a>
+                </div>
+                <!--/products-line__wrapper-->
+
+                <div class="hint-item border border-black rounded-full absolute hidden">
+                    <p class="font-semibold text-xl text-center px-8 py-3">Тяни</p>
+                </div>
+            </section>
+
+            <section class="culture-line mt-10">
+                <h2 class="uppercase text-9xl">Культура</h2>
+
+                <div class="culture-line__wrapper mt-10 owl-carousel">
+                    <a href="#">
+                        <div class="culture-line__item relative">
+                            <div class="culture-line__item-img">
+                                <img src="assets/img/culture-img1.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <p class="culture-line__item-title mt-5 text-2xl uppercase font-semibold">Q-BEAMS’ BIRTHPLACE OF DREAMS | AJII “GRATITUDE”</p>
+                            <div class="culture-line__item-mark border border-black rounded-full absolute top-5 right-5 z-40">
+                                <p class="px-5 py-2 uppercase font-semibold">СООБЩЕСТВО - 30.01.24</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!--/culture-line__item-->
+
+                    <a href="#">
+                        <div class="culture-line__item relative">
+                            <div class="culture-line__item-img">
+                                <img src="assets/img/culture-img2.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <p class="culture-line__item-title mt-5 text-2xl uppercase font-semibold">FUTURE-THINKING: “BL330’ FOR NEW BALANCE 9060</p>
+                            <div class="culture-line__item-mark border border-black rounded-full absolute top-5 right-5 z-40">
+                                <p class="px-5 py-2 uppercase font-semibold">Релиз - 30.01.24</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!--/culture-line__item-->
+
+                    <a href="#">
+                        <div class="culture-line__item relative">
+                            <div class="culture-line__item-img">
+                                <img src="assets/img/culture-img3.png" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <p class="culture-line__item-title mt-5 text-2xl uppercase font-semibold">WANDA LEPHOTO</p>
+                            <div class="culture-line__item-mark border border-black rounded-full absolute top-5 right-5 z-40">
+                                <p class="px-5 py-2 uppercase font-semibold">СООБЩЕСТВО - 30.01.24</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!--/culture-line__item-->
+                </div>
+            </section>
+        </div>
+        <!--/box-container-->
+        
+    </main>
+
+    
+
+    <footer class="footer py-9 mt-20">
+        <div class="box-container">
+            <div class="footer-wrapper">
+                <div class="footer-line flex justify-between items-start">
+                    <p class="add-social">ПРИСОЕДИНЯЙСЯ К <br>НАШЕМУ СООБЩЕСТВУ</p>
+
+                    <div class="footer-line__links flex gap-24">
+                        <ul>
+                            <li class="hover:font-semibold transition-all duration-300"><a href="#">О НАС</a></li>
+                            <li class="hover:font-semibold transition-all duration-300"><a href="#">FAQ</a></li>
+                            <li class="hover:font-semibold transition-all duration-300"><a href="#">КОНТАКТЫ</a></li>
+                            <li class="hover:font-semibold transition-all duration-300"><a href="#">СОБЫТИЯ</a></li>
+                        </ul>
+
+                        <ul>
+                            <li class="hover:font-semibold transition-all duration-300"><a href="#">КАК ЗАКАЗАТЬ</a></li>
+                            <li class="hover:font-semibold transition-all duration-300"><a href="#">ОСТЛЕДИТЬ ЗАКАЗ</a></li>
+                            <li class="hover:font-semibold transition-all duration-300"><a href="#">ВОЗВРАТЫ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <img src="assets/img/logo-w.svg" alt="" class="my-9 w-full">
+
+                <div class="footer-line flex justify-between items-center">
+                    <p>© 2024 LEMKUS ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
+
+                    <div class="footer-line__social flex">
+                        <a href="#" class="flex px-4 py-3 rounded-full">TELEGRAM</a>
+                        <a href="#" class="flex px-4 py-3 rounded-full">INSTAGRAMM</a>
+                        <a href="#" class="flex px-4 py-3 rounded-full">VK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/owl-settings.js"></script>
+</body>
+</html>
