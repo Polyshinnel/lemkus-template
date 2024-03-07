@@ -150,19 +150,31 @@
                 <form action="" class="form-unit flex flex-col items-center">
                     <h1 class="text-center uppercase font-semibold oswald-text text-4xl">Регистрация</h1>
                     <div class="common__input mt-10">
-                        <input type="text" name="login" id="login" placeholder="Имя">
+                        <input type="text" name="firstname" id="input-firstname" placeholder="Имя">
+                        <p class="mt-1 text-sm stix-text text-red-600 hidden">Введите корректное имя!</p>
                     </div>
                     <div class="common__input mt-2">
-                        <input type="text" name="login" id="login" placeholder="Фамилия">
+                        <input type="text" name="lastname" id="input-lastname" placeholder="Фамилия">
+                        <p class="mt-1 text-sm stix-text text-red-600 hidden">Введите корректную фамилию!</p>
                     </div>
                     <div class="common__input mt-2">
-                        <input type="text" name="login" id="login" placeholder="Email">
+                        <input type="text" name="email" id="input-email" placeholder="Email">
+                        <p class="mt-1 text-sm stix-text text-red-600 hidden">Введите корректную почту!</p>
                     </div>
                     <div class="common__input mt-2">
-                        <input type="password" name="login" id="login" placeholder="Пароль">
+                        <input type="text" name="telephone" id="input-telephone" class="phone-input" placeholder="Телефон">
+                        <p class="mt-1 text-sm stix-text text-red-600 hidden">Введите корректный телефон!</p>
+                    </div>
+                    <div class="common__input mt-2">
+                        <input type="password" name="password" id="input-password" placeholder="Пароль">
+                        <p class="mt-1 text-sm stix-text text-red-600 hidden">Пароль должен быть не менее 6 символов!</p>
+                    </div>
+                    <div class="common__input mt-2">
+                        <input type="password" name="confirm" id="input-confirm" placeholder="Повторите пароль">
+                        <p class="mt-1 text-sm stix-text text-red-600 hidden">Пароли должны совпадать</p>
                     </div>
 
-                    <input type="submit" value="Регистрация" class="base-btn yellow-btn h-10 border border-black rounded-full w-56 mt-6">
+                    <input type="submit" value="Регистрация" class="register-btn base-btn yellow-btn h-10 border border-black rounded-full w-56 mt-6">
 
                     <p class="stix-text font-semibold text-xl mt-10 text-center">УЖЕ ЕСТЬ АККАУНТ? <a href="#" class="underline">ВХОД</a></p>
                     <a href="#" class="stix-text text-xl flex mt-2 underline">Забыли пароль?</a>
@@ -213,5 +225,8 @@
     <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/owl-settings.js"></script>
+    <script src="assets/js/fancy-box/fancybox.umd.js"></script>
+    <script src="assets/js/masked-input/jquery.maskedinput.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -147,92 +147,12 @@
 
     <main class="pb-14">
         <div class="box-container">
-            <h1 class="page-title text-8xl font-semibold mt-10 text-center oswald-text uppercase">Оформление заказа</h1>
-
-            <div class="checkout-block flex justify-between items-start mt-16">
-                <div class="customer-info">
-                    <h2 class="stix-text text-3xl font-semibold">Контакты</h2>
-                    <div class="common__input mt-8">
-                        <input type="text" name="customer-name" id="customer-name" placeholder="Имя">
-                        <p class="mt-1 text-sm stix-text text-red-600 hidden">Введите корректное имя!</p>
-                    </div>
-
-                    <div class="common__input mt-2">
-                        <input type="text" name="customer-second-name" id="customer-second-name" placeholder="Фамилия">
-                        <p class="mt-1 text-sm stix-text text-red-600 hidden">Введите корректную фамилию!</p>
-                    </div>
-
-                    <div class="common__input mt-2">
-                        <input type="text" name="customer-mail" id="customer-mail" placeholder="Email">
-                        <p class="mt-1 text-sm stix-text text-red-600 hidden">Введите корректную почту!</p>
-                    </div>
-
-                    <div class="common__input mt-2">
-                        <input type="text" name="customer-phone" id="customer-phone" class="phone-input" placeholder="Телефон">
-                        <p class="mt-1 text-sm stix-text text-red-600 hidden">Введите корректный телефон!</p>
-                    </div>
-                </div>
-
-                <div class="checkout-products">
-                    <div class="header__cart-products-wrapper">
-                        <div class="header__cart-product flex justify-between items-start">
-                            <div class="header__cart-product-info flex items-start">
-                                <div class="header__cart-product-img w-28 h-28 border border-black">
-                                    <img src="assets/img/cart/1.png" class="object-contain w-full h-full" alt="">
-                                </div>
-                                <div class="header__cart-product-data ml-5 w-64">
-                                    <h3 class="text-xl font-semibold">GEL-NUMBUS</h3>
-                                    <p class="text-base">Размер: 6</p>
-                                    <p class="text-xs">2,256.00 руб</p>
-                                </div>
-                            </div>
-                            
-                            <div class="remove-counter-block h-28 relative">
-                                <img src="assets/img/icons/remove.svg" alt="" class="w-6 h-6 cursor-pointer">
-                                <div class="cart-counter-block rounded-full w-20 h-8 bg-black flex justify-center items-center absolute">
-                                    <p class="text-white font-semibold">1</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/header__cart-product-->
-    
-                        <div class="header__cart-product flex justify-between items-start">
-                            <div class="header__cart-product-info flex items-start">
-                                <div class="header__cart-product-img w-28 h-28 border border-black">
-                                    <img src="assets/img/cart/2.png" class="object-contain w-full h-full" alt="">
-                                </div>
-                                <div class="header__cart-product-data ml-5 w-64">
-                                    <h3 class="text-xl font-semibold">CONS AS-1 PRO LEATHER CLASSIC OX</h3>
-                                    <p class="text-base">Размер: 6</p>
-                                    <p class="text-xs">2,256.00 руб</p>
-                                </div>
-                            </div>
-                            
-                            <div class="remove-counter-block h-28 relative">
-                                <img src="assets/img/icons/remove.svg" alt="" class="w-6 h-6 cursor-pointer">
-                                <div class="cart-counter-block rounded-full w-20 h-8 bg-black flex justify-center items-center absolute">
-                                    <p class="text-white font-semibold">1</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/header__cart-product-->
-                        
-                    </div>
-                    <!--/header__cart-products-wrapper-->
-    
-                    <div class="header__cart-total flex flex-col flex-1 justify-end mt-20">
-                        <div class="header__cart-total-text py-3 flex justify-between items-center">
-                            <p>Итого</p>
-                            <span>5,200.00 руб.</span>
-                        </div>
-    
-                        <div class="checkout-cart-totals mt-4 flex flex-col">
-                            <a href="#"><button class="base-btn h-10 border border-black rounded-full w-full"><p>Продолжить покупки</p></button></a>
-                            <button class="checkout-btn base-btn yellow-btn h-10 border border-black rounded-full w-full mt-2"><p>Оформить заказ</p></button>
-                        </div>
-                    </div>
-                    <!--/header__cart-total-->
-                </div>
+            <div class="success-block flex flex-col items-center mt-14">
+                <h1 class="oswald-text text-8xl font-semibold uppercase">Покупка совершена</h1>
+                <p class="stix-text mt-8 text-xl">Покупка успешно совершена, в ближайшее время с вами свяжется менеджер для решения ваших вопросов</p>
+                <p class="stix-text mt-1 text-xl"><b>Ваш номер заказа:</b> №000111012</p>
+                <img src="assets/img/sucess.png" alt="">
+                <a href="/"><button class="base-btn yellow-btn border border-black rounded-full mt-10 err-btn"><p>На главную</p></button></a>
             </div>
         </div>
     </main>
@@ -274,20 +194,12 @@
         </div>
     </footer>
 
-    <div class="order-processing" id="order-processing">
-        <div class="order-processing__wrapper">
-            <img src="assets/img/icons/loading.gif" alt="">
-            <p>Идет оформление заказа!</p>
-        </div>
-    </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/owl-settings.js"></script>
     <script src="assets/js/fancy-box/fancybox.umd.js"></script>
-    <script src="assets/js/masked-input/jquery.maskedinput.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

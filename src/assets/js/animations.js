@@ -19,6 +19,7 @@ $('.base-btn').hover(
     function() {
         let selector = $(this).find('p');
         let text = selector.html();
+        selector.attr('data-text', text)
         let multipleText = '';
         for(let i=0;i<20;i++) {
             multipleText += text+' ';
@@ -28,10 +29,8 @@ $('.base-btn').hover(
     },
     function() {
         let selector = $(this).find('p');
-        let text = selector.html();
-        let startText = text.split(' ');
-        startText = startText[0];
-        selector.html(startText)
+        let text = selector.attr('data-text')
+        selector.html(text)
         selector.removeClass('track');
     }
 )
